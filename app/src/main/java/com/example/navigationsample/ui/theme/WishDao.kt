@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.Flow
 abstract class WishDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    abstract suspend fun addAWish(wishEntity: WishDao)
+    abstract suspend fun addAWish(wishEntity: Wish)
 
     // PAMIETAJ O DOBRYM IMPORCIE!!!!!!!!!
     @Query("Select * from `wish-table`") // PAMIETAJ TYLDY NIE APOSTROFY DO NAZWY TABELI
